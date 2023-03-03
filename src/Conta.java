@@ -1,13 +1,11 @@
-  public class Conta {
-    private double saldo;
+  public abstract class Conta {
+    protected double saldo;
     private int agencia;
     private int numero;
     Cliente titular;
     private static int total;
 
-    void deposito(double valor){
-        saldo += valor;
-    }
+    public abstract void deposito(double valor);
 
     public boolean sacar(double valor){
         if(saldo >= valor){
@@ -18,8 +16,7 @@
     }
 
     public boolean transfere(double valor, Conta destino){
-        if(saldo >= valor){
-            saldo -= valor;
+        if(sacar(valor)){
             destino.deposito(valor);
             return true;
         }
