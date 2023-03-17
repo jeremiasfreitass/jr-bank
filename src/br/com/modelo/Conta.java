@@ -1,4 +1,6 @@
-  public abstract class Conta {
+package br.com.modelo;
+
+public abstract class Conta {
     protected double saldo;
     private int agencia;
     private int numero;
@@ -7,20 +9,16 @@
 
     public abstract void deposito(double valor);
 
-    public boolean sacar(double valor){
-        if(saldo >= valor){
-            saldo -= valor;
-            return true;
+    public void sacar(double valor) throws SaldoInsuficienteException{
+        if(this.saldo < valor) {
+            throw new SaldoInsuficienteException("Saldo: " + this.saldo + " Valor: " + valor);
         }
-        return false;
+        this.saldo -= valor;
     }
 
-    public boolean transfere(double valor, Conta destino){
-        if(sacar(valor)){
-            destino.deposito(valor);
-            return true;
-        }
-        return false;
+    public void transfere(double valor, Conta destino) throws SaldoInsuficienteException{
+        this.sacar(valor);
+        destino.deposito(valor);
     }
 
     public double getSaldo(){

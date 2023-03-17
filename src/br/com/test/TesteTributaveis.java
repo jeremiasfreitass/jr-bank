@@ -1,3 +1,9 @@
+package br.com.test;
+
+import br.com.CalculadorDeImposto;
+import br.com.ContaCorrente;
+import br.com.SeguroDeVida;
+
 public class TesteTributaveis {
     public static void main(String[] args) {
 

@@ -1,3 +1,5 @@
+package br.com.modelo;
+
 public class CalculadorDeImposto {
     private double totalImposto;
     public void registra(Tributavel tributavel){
