@@ -17,5 +17,7 @@ public class TesteContas {
 
         System.out.println("Saldo br.com.modelo.Conta Corrente: " + cc.getSaldo());
         System.out.println("Saldo br.com.modelo.Conta Poupança: " + cp.getSaldo());
+
+        System.out.println(cc);
     }
 }

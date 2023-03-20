@@ -1,8 +1,8 @@
 package br.com.test;
 
-import br.com.Conta;
-import br.com.ContaCorrente;
-import br.com.SaldoInsuficienteException;
+import br.com.modelo.Conta;
+import br.com.modelo.ContaCorrente;
+import br.com.modelo.SaldoInsuficienteException;
 
 public class TesteSacar {
     public static void main(String[] args) {
