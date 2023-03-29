@@ -23,6 +23,6 @@ public class ContaCorrente extends Conta implements Tributavel {
 
     @Override
     public String toString() {
-        return "Conta Corrente. Número: " + getNumero();
+        return "Conta Corrente: " + super.toString();
     }
 }

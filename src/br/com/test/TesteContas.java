@@ -1,5 +1,6 @@
 package br.com.test;
 
+import br.com.modelo.Conta;
 import br.com.modelo.ContaCorrente;
 import br.com.modelo.ContaPoupanca;
 import br.com.modelo.SaldoInsuficienteException;
@@ -15,9 +16,13 @@ public class TesteContas {
 
         cc.transfere(50,cp);
 
-        System.out.println("Saldo br.com.modelo.Conta Corrente: " + cc.getSaldo());
-        System.out.println("Saldo br.com.modelo.Conta Poupança: " + cp.getSaldo());
+        ContaCorrente contaTeste = new ContaCorrente(123, 123);
+
+        System.out.println("Saldo Conta Corrente: " + cc.getSaldo());
+        System.out.println("Saldo Conta Poupança: " + cp.getSaldo());
+        System.out.println("Conta teste: " + contaTeste);
 
         System.out.println(cc);
+        System.out.println(cp);
     }
 }
