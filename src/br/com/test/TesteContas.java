@@ -21,6 +21,7 @@ public class TesteContas {
         System.out.println("Saldo Conta Corrente: " + cc.getSaldo());
         System.out.println("Saldo Conta Poupança: " + cp.getSaldo());
         System.out.println("Conta teste: " + contaTeste);
+        System.out.println("Conta teste: " + contaTeste);
 
         System.out.println(cc);
         System.out.println(cp);
